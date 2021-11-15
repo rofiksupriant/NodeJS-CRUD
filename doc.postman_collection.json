@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "fde7b0af-ccc7-4be7-8f05-48e4710624ce",
+		"name": "pahamify",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get pokemons",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}pokemon/get_pokemons?limit=20",
+					"host": [
+						"{{URL}}pokemon"
+					],
+					"path": [
+						"get_pokemons"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add pokemon",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"national_number\": \"011\",\r\n      \"name\": \"Metapod\",\r\n      \"type\": [\r\n        \"Bug\"\r\n      ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}pokemon/create_pokemon",
+					"host": [
+						"{{URL}}pokemon"
+					],
+					"path": [
+						"create_pokemon"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete pokemon",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}pokemon/delete_pokemon/5fca481726db282318060934",
+					"host": [
+						"{{URL}}pokemon"
+					],
+					"path": [
+						"delete_pokemon",
+						"5fca481726db282318060934"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit pokemon",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"national_number\": \"001\",\r\n      \"name\": \"Bulbasaur\",\r\n      \"type\": [\r\n        \"Grass\",\r\n        \"Poison\"\r\n      ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}pokemon/edit_pokemon/5fca28adea27dd945730949f",
+					"host": [
+						"{{URL}}pokemon"
+					],
+					"path": [
+						"edit_pokemon",
+						"5fca28adea27dd945730949f"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
